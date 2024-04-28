@@ -1,0 +1,138 @@
+/* Existing CSS */
+
+.pr1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    /* background-color: floralwhite; */
+    margin-top: 30px;
+}
+
+.total p {
+    color: black;
+    margin-top: 20px; /* Adjusted margin-top */
+    text-align: center;
+}
+
+.total h1 {
+    text-align: center;
+}
+
+.pr1 .con1 {
+    /* border: 2px solid black; */
+    width: 1000px;
+}
+
+
+.pr1 .con2 {
+    /* border: 2px solid black; */
+    height: 500px;
+    width: 800px;
+    margin-right: 100px;
+}
+
+.pr1 .con2 p {
+    text-align: justify;
+    line-height: 35px;
+    font-size: 20px;
+    text-indent: 10%;
+}
+
+.pr1 .con2 button {
+    margin-bottom: 20px;
+    background-color: rgb(7, 154, 246);
+    color:white;
+    padding:10px;
+    border:none;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+@keyframes rotateWithPause {
+    0%, 50%, 100% {
+        transform: rotate(0deg); /* Start with no rotation */
+    }
+    25% {
+        transform: rotate(180deg); /* Rotate halfway (180 degrees) */
+    }
+    75% {
+        transform: rotate(360deg); /* Rotate back to starting position (360 degrees) */
+    }
+}
+
+.pr1 .con1 .image {
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 200px;
+    width: 280px;
+    height: 300px;
+    z-index: 1;
+    animation: rotateWithPause 10s ease-in-out infinite; /* Apply the rotation animation with ease-in-out timing function */
+    transition: transform 0.3s; /* Add a transition for the transform property */
+}
+
+.pr1 .con1 .image:hover {
+    transform: scale(1.1); /* Zoom in by 10% when hovering */
+    animation-play-state: paused; /* Pause the rotation animation on hover */
+}
+
+/* Additional CSS for table */
+.table-like-structure {
+    width: 100%;
+    margin-top: 40px; /* Adjusted margin-top */
+    overflow-x: auto;
+    margin-bottom: 15px; /* Add horizontal scrollbar if needed */
+}
+
+.table-like-structure table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-like-structure th, .table-like-structure td {
+    border: 1px solid black;
+    padding: 8px; /* Adjusted padding */
+    text-align: left;
+    
+}
+
+.table-like-structure th {
+    background-color: rgb(111, 195, 247);
+    
+}
+
+@media screen and (max-width: 1000px) {
+    .pr1 {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align items horizontally */
+    }
+
+    .pr1 .con1,
+    .pr1 .con2 {
+        width: 100%; /* Set width to 100% */
+        margin-right: 0; /* Reset margin */
+    }
+
+    .pr1 .con2 {
+        margin-top: 20px; /* Add some spacing between con1 and con2 */
+    }
+
+    .pr1 .con1 .image {
+        margin-top: 40px; /* Adjust margin-top for image */
+        margin-left: 0; /* Reset margin-left */
+        position: static; /* Reset position */
+        width: 80%; /* Set width to 80% of the parent container */
+        max-width: 280px; /* Limit maximum width */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+/* Media query specifically for table to be responsive */
+@media screen and (max-width: 1000px) {
+    .table-like-structure{
+        margin-top:180px;
+    }
+    .table-like-structure th, .table-like-structure td {
+        padding-top: 6px; /* Reduce padding for smaller screens */
+    }
+}

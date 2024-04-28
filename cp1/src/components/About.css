@@ -1,0 +1,182 @@
+.about {
+    width: 100%;
+    height: 1500px;
+}
+
+.about1 {
+    height: 700px;
+    border: 2px solid black;
+}
+
+.about1 h1 {
+    text-align: center;
+    padding-top: 200px;
+    font-size: 40px;
+    color: rgb(7, 154, 246);
+}
+
+.about1 h2 {
+    text-align: center;
+    padding-top: 15px;
+    font-size: 50px;
+}
+
+.about1 p {
+    color: black;
+    text-align: center;
+    font-size: 25px;
+}
+
+.about1 button {
+    position: absolute;
+    left: 50%;
+    margin-top: 20px;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 40px;
+    background-color: rgb(7, 154, 246);
+    color: white;
+    padding: 5px;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+}
+
+.about2 {
+    display: flex;
+    height: 700px;
+    border: 2px solid black;
+    position: relative; /* Ensure relative positioning */
+    background-image: url("https://i0.wp.com/www.allaroundfenceanddecks.com/wp-content/uploads/2021/07/Chain_link_fence.jpg?fit=550%2C309&ssl=1"); /* Add background image */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-size: cover; /* Cover the entire container with the background image */
+}
+
+.about2::after {
+    content: ""; /* Create an overlay */
+    position: absolute; /* Position the overlay absolutely */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+}
+
+.about2 .abo {
+    width: 600px;
+    margin: 100px;
+    padding: 20px;
+    height: auto;
+    overflow-y: auto;
+    position: relative; /* Ensure relative positioning */
+    z-index: 1; /* Ensure the content is above the overlay */
+}
+
+.about2 .abo1 {
+    background-color: rgba(7, 154, 246, 0.9); /* RGBA color with alpha value for transparency */
+    border-radius: 15px;
+    width: 10px;
+    margin: 100px;
+    height: 100px;
+    position: relative; /* Ensure relative positioning */
+    z-index: 1; /* Ensure the content is above the overlay */
+}
+
+
+.logo-container .logo {
+    position: absolute; /* Position the logo absolutely */
+    margin-top: 10%; /* Align the top of the logo to the middle of the parent container */
+    left: 50%; /* Align the left of the logo to the middle of the parent container */
+    transform: translate(-50%, -50%); /* Center the logo both horizontally and vertically */
+    width: 100px; /* Set the width of the logo */
+    height: auto; /* Allow the height to adjust proportionally */
+    border-bottom: none; /* Remove the underline */
+    z-index: 2; /* Ensure the logo is above other content */
+}
+
+
+
+/* Remaining styles... */
+
+
+.abo1 h1 {
+    color: #f1f1f1;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.abo1 p {
+    font-size: 20px;
+    padding: 20px;
+    line-height: 1.5;
+    color:white;
+}
+
+.abo1 button {
+    margin-bottom: 20px;
+    margin-left: 90px;
+    background-color:white ;
+    color:rgb(7, 154, 246);
+    padding:10px;
+    border:none;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+.abo h1 {
+    color: whitesmoke;
+    padding-top: 5px;
+    line-height: 1;
+}
+
+.abo p {
+    font-size: 25px;
+    line-height: 1.5;
+    color: whitesmoke;
+    padding-top: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+    .about {
+        height: auto;
+    }
+
+    .about2 {
+        flex-direction: column-reverse; /* Stack the .abo1 and .abo section upside down */
+        height: auto; /* Adjust height for responsiveness */
+    }
+
+    .about2 .abo,
+    .about2 .abo1 {
+        width: calc(100% - 200px); /* Adjust width to prevent overlapping */
+        margin: 50px auto; /* Adjust margin for spacing */
+        height: auto; /* Adjust height for responsiveness */
+    }
+
+    .about2 .abo1 {
+        order: -1; /* Move .abo1 to the top */
+    }
+
+    .abo1 button {
+        display: block; /* Ensure button is a block-level element */
+        margin: 0 auto; /* Center button horizontally */
+        margin-bottom: 15px; /* Add some top margin for spacing */
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .about2 {
+        flex-direction: row; /* Arrange .abo and .abo1 side by side */
+        height: auto; /* Adjust height for responsiveness */
+    }
+
+    .about2 .abo {
+        width: 50%; /* Divide space equally for both columns */
+        height: auto; /* Allow content to expand vertically */
+    }
+
+    .about2 .abo1 {
+        width: 350px;
+        height: auto;
+    }
+}

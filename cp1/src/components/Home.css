@@ -1,0 +1,90 @@
+/* Existing CSS */
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+.home img {
+    width: 100%;
+    height: 600px;
+    opacity: 1;
+    filter: brightness(60%);
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+}
+
+.slideshow-container img {
+    width: 100%;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    padding-bottom: 290px;
+    text-align: center;
+    font-size: 50px;
+    /* Added CSS for breaking captions into two lines */
+    white-space: pre-line; /* Allow line breaks */
+    word-wrap: break-word; /* Break words that exceed container width */
+    max-width: 50%; /* Adjust maximum width as needed */
+    margin: 0 25%; /* Center horizontally */
+}
+
+.button-over-caption {
+    position: absolute;
+    bottom: 200px; /* Adjust button position from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    border-radius: 15px;
+    height:auto;
+    width:auto;
+    font-size: 20px;
+    background-color: rgb(7, 154, 246);
+    color:white;
+    padding:10px;
+    border:none;
+    text-decoration: none;
+}
+
+.dot-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: rgb(7, 154, 246);
+}
+
+/* New Media Query */
+@media screen and (max-width: 600px) {
+    .caption {
+        font-size: 30px; /* Adjust caption font size for smaller screens */
+        padding-bottom: 200px; /* Reduce space between caption and button for smaller screens */
+    }
+    
+    .button-over-caption {
+        bottom: 100px; /* Adjust button position from the bottom for smaller screens */
+        font-size: 16px; /* Adjust button font size for smaller screens */
+    }
+}

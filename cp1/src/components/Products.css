@@ -1,0 +1,109 @@
+.prod {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    margin-top: 20px; /* Add margin-top to create space between the .prod container and containers above it */
+}
+
+.prod h1 {
+    color: rgb(1, 12, 12);
+    text-align: start;
+    padding-top: 10px;
+    padding-left: 105px;
+    line-height: 0.5px;
+}
+
+.prod h2 {
+    color: rgb(1, 12, 12);
+    text-align: start;
+    padding-top: 50px;
+    padding-left: 105px;
+    font-size: 33px;
+}
+
+.prod p {
+    color: rgb(7, 154, 246);
+    text-align: start;
+    padding-top: 30px;
+    padding-left: 105px;
+}
+
+.prodiv,
+.prodiv1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+.links{
+    font-weight: bolder;
+    color:  rgb(7, 154, 246);
+}
+
+.prodiv > div,
+.prodiv1 > div {
+    box-sizing: border-box;
+    width: calc(50% - 20px);
+    max-width: 200px;
+    margin: 20px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.prodiv figcaption,
+.prodiv1 figcaption {
+    line-height: 0.5;
+    padding-left: 6px;
+}
+
+.prodiv figcaption p,
+.prodiv1 figcaption p {
+    padding-top: 5px;
+    padding-left: 2px;
+    color:black;
+}
+
+.prodiv figcaption h4::after,
+.prodiv1 figcaption h4::after {
+    content: '\2192'; /* Unicode for right arrow */
+    padding-left: 50px;
+    padding-bottom: 1px; /* Adjust spacing between text and arrow */
+    font-size: 23px; /* Increase the size of the arrow */
+}
+
+.prodiv figcaption a,
+.prodiv1 figcaption a {
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .prod {
+        height: auto; /* Adjust height to fit content */
+        padding-top: 60px; /* Add padding-top instead of margin-top */
+        padding-bottom: 20px; /* Add padding-bottom for spacing */
+    }
+    .prod h1,
+    .prod h2,
+    .prod p {
+        padding-left: 20px; /* Adjust padding for better alignment */
+    }
+    .prodiv,
+    .prodiv1 {
+        flex-direction: column;
+        align-items:center;
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+    .prodiv > div,
+    .prodiv1 > div {
+        width: calc(100% - 20px); /* Full width with reduced padding */
+        margin: 10px 0; /* Adjust margin for better spacing */
+    }
+    h1,h2 {
+        margin-top: 10px; /* Reduce margin-top to create less space between header and .prod container */
+        font-size: 18px; /* Reduce font size */
+        line-height: 1.5; /* Reduce line height */
+    }
+}
